@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <title>Edit Instrument</title>
     </head>
     <body>
-        <h1>Edit Studio Page</h1>
-        <form action="/studio/instruments/<%=studio.id%>?_method=PUT" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" name="name" /><br/>
-            <label for="manufacturer">Manufacturer</label>
-            <input type="text" name="manufacturer" /><br/>
-            <label for="category">Category</label>
-            <select name="category" id="category">
-                <option value="instrument">Instrument</option>
-                <option value="effects">Effects</option>
-                <option value="software">Software</option>
-                <option value="accessories">Accessories</option>
-            </select><br>
-            <label for="serial">Serial</label>
-            <input type="text" name="serial"><br>
-            <label for="cost">Cost</label>  
-            <input type="text" name="cost"><br>
-            <input type="submit" name="" value="Submit Changes"/>
-        </form>
+        <header>
+            <div class="banner">
+                <h1 class="banner-header">Studio-Manager</h1>
+                <a href="/studio/">My Studio</a>
+                <a href="/studio/instruments">Instruments</a>
+                <a href="/studio/effects">Effects</a>
+                <a href="/studio/software">Software</a>
+                <a href="/studio/accessories">Accessories</a>
+                
+            </div>
+        </header>
+        <div class= "main-container">
+            <h1 class="page-header">Edit Instrument</h1>
+            <div class="form-container">
+                <form action="/studio/instruments/<%=studio.id%>?_method=PUT" method="POST">
+                <div class="label stack">
+                    <label for="name">Name:</label> <br>
+                    <label for="manufacturer">Manufacturer:</label> <br>
+                    <label for="category">Category:</label> <br>
+                    <label for="serial">Serial:</label> <br>
+                    <label for="cost">Cost:</label> <br>
+                    <label for="image">Image:</label>  <br>
+                </div>
+                <div class="input-stack">
+                    <input type="text" name="name" value="<%=studio.name%>"/><br/>
+                    <input type="text" name="manufacturer" value="<%=studio.manufacturer%>"/><br/>
+                    <select name="category" id="category">
+                        <option value="instrument">Instrument</option>
+                        <option value="effects">Effects</option>
+                        <option value="software">Software</option>
+                        <option value="accessories">Accessories</option>
+                    </select><br>
+                    <input type="text" name="serial" value="<%=studio.serial%>"><br>
+                    <input type="text" name="cost" value="<%=studio.cost%>"><br>
+                    <input type="text" name="image" value="<%=studio.image%>"><br>
+                </div>
+                
+                    <input class="button" type="submit" name="" value="Submit Changes"/>
+                </form>
+            </div>
+        </div>
     </body>
 </html>

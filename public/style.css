@@ -1,3 +1,244 @@
-h1 {
-    color: blue;
+body {
+    color:rgb(247, 114, 99) ;
+    margin: 0 auto;
 }
+
+
+.main-container {
+    background: url('../img/mixer_colorful.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1200px;
+    text-align: center;
+}
+
+.banner {
+    margin: 0 auto;
+    background: url('../img/waveform2.jpg');
+    background-size: cover;
+    background-size: 100%;
+    background-position: center;
+    padding: 40px;
+}
+.banner-header {
+    margin-top: 0;
+    font-size: 48px;
+    color:rgb(247, 114, 99)
+}
+a, body {
+    color:rgb(247, 114, 99);
+}
+.page-header {
+    margin-top: 0;
+    font-size: 48px;
+    color:rgb(247, 114, 99);
+    padding-top: 75px;
+}
+
+/* icon box on main page */
+.icon-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    max-width: 200;
+    background-color: rgba(43, 42, 42, 0.646);
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 10px;
+    
+}
+.icon-stack {
+    display: flex;
+    flex-direction: column;
+}
+.icon {
+    padding: 20px 40px 10px 40px;
+    height: 150px;
+    width: 150px;
+    border-radius: 70px;
+}
+ul {
+    list-style: none;
+}
+/* gear index background box */
+.gear-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        background-color: rgba(43, 42, 42, 0.646);
+        /* height: 600px; */
+        width: 700px;
+        border-radius: 20px;
+        margin: 30px auto;
+        padding: 10px;
+        
+}
+.show-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(43, 42, 42, 0.646);
+    height: 400px;
+    width: 650px;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 20px;
+    
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center ;
+}
+.thumbnail {
+    padding: 10px 40px 10px 40px;
+    height: 150px;
+    width: 150px;
+    border-radius: 70px;
+}
+.full-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(43, 42, 42, 0.646);
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 30px;
+   
+}
+input {
+    line-height: 20px;
+    
+}
+label {
+    display: flex;
+    justify-content: right;
+    font-size: 16pt;
+    margin-right: 10px;
+}
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+   
+    
+}
+.label-stack {
+    display: flex;
+    flex-direction: column;
+  
+}
+.input-stack {
+    display: flex;
+    flex-direction: column;
+}
+.button {
+   text-align: center;
+   width: 150px;
+   margin-top: 10px;
+}
+.delete {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 12pt;
+    color:rgb(247, 114, 99);
+  }
+  .edit {
+      margin-right: 10px;
+      text-decoration: none;
+  }
+  .thumbnail-name {
+      font-size: 20px;
+      margin-bottom: 5px;
+      margin-top: 25px;
+  }
+  .create-button {
+    text-align: center;
+    margin: auto;
+    width: 220px;
+    height:20px;
+    padding: 20px;
+    font-size: 16pt;
+    background-color:rgba(43, 42, 42,1.0);
+    border: solid 2px;
+    border-color: rgb(247, 114, 99);
+    border-radius: 30px;
+  }
+  .create {
+      color: rgb(247, 114, 99);
+      text-decoration: none;
+  }
+
+  @media only screen and (max-width: 500px) {
+    body {
+        margin: auto;
+       
+    }
+    .gear-container, .form-container  {
+       max-width: 300px;
+    }
+
+.show-container  {
+    max-width: 300px;
+    display: flex;
+    flex-flow: column;
+}
+.icon-container  {
+    max-width: 300px;
+    height: 600px;
+}
+
+.full-image {
+    height: 150px;
+    width: 150px;
+    padding: 0px;
+}
+.show-text {
+    margin-top: 3px;
+}
+.page-header {
+    font-size: 32px;
+}
+.banner-header {
+    font-size: 36px;
+}
+.icon {
+    width: 85px;
+    height: 85px;
+}
+.thumbnail {
+    width: 100px;
+    height: 100px;
+}
+.main-container {
+    height: 2000px;
+}
+.banner {
+    padding: 0;
+}
+.page-header {
+    padding-top: 50px;
+}
+}
+
+

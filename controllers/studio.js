@@ -3,7 +3,9 @@ const router = express.Router();
 
 const Studio = require('../models/studio.js');
 
-// main page
+// ROUTES
+
+// Main Page
 router.get('/', (req, res)=>{
   Studio.find({}, (error, allStudio)=>{
     res.render('index.ejs', {
@@ -11,6 +13,7 @@ router.get('/', (req, res)=>{
       })
   })
 })
+
 
 // index Instruments
 router.get('/instruments', (req, res)=>{
@@ -166,6 +169,7 @@ router.put('/accessories/:id', (req, res)=>{
 // show Instruments
 router.get('/instruments/:id', (req, res) =>{
   Studio.findById(req.params.id, (err, foundStudio)=>{
+    // console.log(err, foundStudio) for debug
     res.render('instruments/show.ejs', {
       studio: foundStudio,
     })
@@ -223,7 +227,7 @@ router.delete('/software/:id', (req, res) => {
 // delete accessories
 router.delete('/accessories/:id', (req, res) => {
   Studio.findByIdAndRemove(req.params.id, { useFindAndModify: false }, (err, data)=>{
-    res.redirect('/studio/accesories') 
+    res.redirect('/studio/accessories') 
   })
 })
 

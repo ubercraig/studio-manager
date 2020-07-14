@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <title>Main</title>
     </head>
     <body>
-        <h1>Studio show page</h1>
-        <%=studio.name %> <br>
-        <%=studio.manufacturer %> <br>
-        <%=studio.category %> <br>
-        <%=studio.serial %> <br>
-        <%=studio.cost %>
-        
-        <nav>
-            <a href="/studio/effects">Back to Index</a>
-        </nav>
+        <header>
+            <div class="banner">
+                <h1 class="banner-header">Studio-Manager</h1>
+                <a href="/studio/">My Studio</a>
+                <a href="/studio/instruments">Instruments</a>
+                <a href="/studio/effects">Effects</a>
+                <a href="/studio/software">Software</a>
+                <a href="/studio/accessories">Accessories</a>
+                
+            </div>
+        </header>
+        <div class="main-container">
+            <h1 class="page-header"><%=studio.name%></h1>
+            <div class="show-container">
+                <img src="../<%=studio.image %>" class="full-image" alt=""> <br>
+                <div class="text-container">
+                    <h3 class="show-text"> Manufacturer: <%=studio.manufacturer %> </h3> <br>
+                    <h3 class="show-text">Category: <%=studio.category %> </h3> <br>
+                    <h3 class="show-text">Serial: <%=studio.serial %> </h3> <br>
+                    <h3 class="show-text">Cost: $<%=studio.cost %> </h3> <br>
+                </div>
+            </div>
+            <div class="create-button">
+                <a class="create" href="/studio/effects">Back to Effects</a>
+            </div>
+        </div>
     </body>
 </html>

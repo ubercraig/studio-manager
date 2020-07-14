@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Main</title>
 </head>
 <body>
     <header>
-        <div class = "banner">
-            <h1>Studio-Manager</h1>
+        <div class="banner">
+            <h1 class="banner-header">Studio-Manager</h1>
+            <a href="/studio/">My Studio</a>
+            <a href="/studio/instruments">Instruments</a>
+            <a href="/studio/effects">Effects</a>
+            <a href="/studio/software">Software</a>
+            <a href="/studio/accessories">Accessories</a>
+            
         </div>
     </header>
-    <a href="/studio/instruments">Instruments</a>
-    <a href="/studio/effects">Effects</a>
-    <a href="/studio/software">Software</a>
-    <a href="/studio/accessories">Accessories</a>
+   <div class="main-container">
+    <h1 class="page-header">My Studio</h1>
+    <div class= "icon-container">
+        <div class="icon-stack">
+            <img class= "icon" src="../img/guitar.png" alt="instruments">
+            <a href="/studio/instruments">Instruments</a>
+        </div>
+        <div class="icon-stack">
+            <img class= "icon" src="../img/effects.png" alt="effects">
+            <a href="/studio/effects">Effects</a>
+        </div>
+        <div class="icon-stack">
+            <img class= "icon" src="../img/software.png" alt="software">
+            <a href="/studio/software">Software</a>
+        </div>
+        <div class="icon-stack">
+            <img class= "icon" src="../img/accessories.png" alt="accessories">
+            <a href="/studio/accessories">Accessories</a>
+         </div>
+    </div>
+   </div>
 </body>
 </html>
