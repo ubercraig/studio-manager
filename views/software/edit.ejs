@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Software Page</h1>
+        <form action="/studio/software/<%=studio.id%>?_method=PUT" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" /><br/>
+            <label for="manufacturer">Manufacturer</label>
+            <input type="text" name="manufacturer" /><br/>
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="instrument">Instrument</option>
+                <option value="effects">Effects</option>
+                <option value="software">Software</option>
+                <option value="accessories">Accessories</option>
+            </select><br>
+            <label for="serial">Serial</label>
+            <input type="text" name="serial"><br>
+            <label for="cost">Cost</label>  
+            <input type="text" name="cost"><br>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+    </body>
+</html>

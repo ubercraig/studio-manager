@@ -1,10 +1,10 @@
 {
   "name": "studio-manager",
   "version": "1.0.0",
+  "description": "",
   "engines": {
     "node": "14.3.0"
   },
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,15 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ubercraig/studio-manager.git"
+    "url": "https://git.generalassemb.ly/UberCraig/studio-manager.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ubercraig/studio-manager/issues"
-  },
-  "homepage": "https://github.com/ubercraig/studio-manager#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.22"

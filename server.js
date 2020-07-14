@@ -6,6 +6,8 @@ const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
+require('dotenv').config()
+
 //___________________
 //Port
 //___________________
@@ -16,14 +18,16 @@ const PORT = process.env.PORT || 3000;
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/'+ 'studio-manager';
+const mongodbURI = process.env.MONGODBURI || 'mongodb://localhost/'+ 'studio';
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(mongodbURI,  { useNewUrlParser: true, useUnifiedTopology: true });
+
+const Studio = require('./models/studio.js')
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
+db.on('connected', () => console.log('mongo connected: ', mongodbURI ));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
 // open the connection to mongo
@@ -43,6 +47,9 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
+
+const studioController = require('./controllers/studio.js')
+app.use('/studio', studioController)
 
 //___________________
 // Routes
